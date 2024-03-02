@@ -1,0 +1,134 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* Nav Bar Style */
+    body {
+        margin: 0;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 60px;
+        background-color: white;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.215);
+        z-index: 1;
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-right: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover {
+        color: aqua;
+        border-bottom: 4px solid aqua;
+    }
+
+    /* The End Of Nav Bar Style */
+
+    .text-container>h1 {
+        font: normal normal 900 80px/118px Heebo;
+    }
+
+    .text-container>p {
+        font: normal normal 500 20px/30px Heebo;
+    }
+
+    .header-container {
+        background-image:
+            linear-gradient(to bottom, #00d4dfbb, #13E8F163), url('./images/bg2.jpg');
+        height: 28.8125em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    .text-container button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+        /* تحديد حواف مدورة */
+        transition: all 0.3s ease;
+        /* لتأثير الانتقال */
+    }
+
+    .text-container button:hover {
+        background-color: #2980b9;
+        /* تغيير لون الخلفية عند التحويم */
+    }
+
+    .technologies {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.215);
+        z-index: 2;
+    }
+
+    .project-container {
+        height: 950px;
+        background-color: #EBFEFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-container>img {
+        box-shadow: 0px 0px 40px #00000066;
+        max-width: 100%;
+        max-height: 100%;
+        height: 600px;
+    }
+
+    .rights {
+        background-color: #00d4dfbb;
+    }

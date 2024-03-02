@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Countries</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <div class="container">
+      <div class="form-floating my-3 form-check-inline">
+        <input
+          type="text"
+          class="form-control"
+          id="capital"
+          placeholder="jerusalem"
+        />
+        <label for="capital">Capital City</label>
+      </div>
+      <button class="btn btn-primary" onclick="search()">Search</button>
+    </div>
+    <div id="content"></div>
+    <script>
+      function search() {
+        let capital = document.querySelector("#capital").value;
+        axios
+          .get(`https://restcountries.com/v3.1/capital/${capital}`)
+          .then((response) => {
+            console.log(response.data[0]);
+            document.getElementById(
+              "content"
+            ).innerHTML = `<h3> ${response.data[0].name.common} </h3>
+              <img src=${response.data[0].flags.png} alt=${response.data[0].flags.alt} />`;
+          });
+      }
+    </script>
+  </body>
+</html>
